@@ -1,69 +1,33 @@
-Overview
-This is a Python-based keylogger project that captures keystrokes from the target system, stores the data locally in a text file, and sends the captured logs via email at regular intervals.
+# Keylogger Project
 
-Features:
-Captures all keystrokes.
+## Overview
 
-Saves logs in keylog.txt.
+This project is a **Python-based keylogger** designed for educational purposes. It records keystrokes, saves the data in a local file, and sends periodic keylog reports via email.
 
-Sends keylog reports to your email every 2 minutes.
+### Features:
+- **Keystroke Logging**: Captures keystrokes and saves them in `keylog.txt`.
+- **Email Reports**: Sends captured logs to a specified email every 2 minutes.
+- **Session Management**: Logs the start and end of each session.
+- **Background Operation**: Runs silently in the background after being compiled to `.exe`.
+- **Persistence**: Optionally configure auto-start on system boot via the registry (Windows).
 
-Automatically runs in the background (once converted to .exe).
+### Ethical Disclaimer:
+This keylogger is **for educational purposes only**. Unauthorized use or deployment without consent is **illegal** and **unethical**. Always obtain explicit permission before using any keylogging software.
 
-Can be set to auto-start on Windows boot (optional).
+---
 
-Dependencies:
-This project requires the following Python libraries:
+## Installation
 
-pynput – To capture keyboard events.
+To run this project, you'll need Python and the dependencies listed below.
 
-pyinstaller – To convert the script into an executable.
+### Prerequisites:
 
-yagmail – To send emails securely via Gmail.
+- **Python 3.6+**
+- **pip** (Python's package manager)
 
-keyring – For securely handling Gmail credentials.
+### Step 1: Clone the Repository
 
-Install Dependencies:
-To install the required dependencies, run the following command:
+Clone or download the repository to your local machine:
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-How to Run:
-Clone or download this repository to your local machine.
-
-Install dependencies by running the pip install -r requirements.txt command.
-
-Run the keylogger script using Python:
-
-bash
-Copy
-Edit
-python keylogger.py
-The keylogger will now capture keystrokes and save them in keylog.txt and send an email every 2 minutes.
-
-Converting to .exe:
-To convert the script to a standalone .exe file, use PyInstaller:
-
-bash
-Copy
-Edit
-pyinstaller --onefile --noconsole --icon=icon.ico keylogger.py
-This will create a .exe file that you can run on any Windows machine.
-
-Auto-Start on Windows Boot:
-If you want the keylogger to run automatically on Windows startup, use the following approach:
-
-Create a file add_to_startup.py that adds the keylogger to the registry.
-
-When the .exe file is executed, it will copy itself to AppData and add a registry entry to start automatically on boot.
-
-Important: Ensure you only use this project ethically and with permission. Unauthorized use of keyloggers is illegal and unethical.
-
-Ethical Note:
-This keylogger project is for educational purposes only. Unauthorized use of keyloggers without consent is illegal and unethical. Always ensure that you have proper permission before using such software.
-
-License:
-This project is open-source, and you are welcome to modify it for your educational purposes. Please do not use it for malicious activities.
-
+```bash
+git clone https://github.com/yourusername/keylogger-project.git
