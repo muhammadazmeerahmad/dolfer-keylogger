@@ -27,7 +27,34 @@ To run this project, you'll need Python and the dependencies listed below.
 
 ### Step 1: Clone the Repository
 
-Clone or download the repository to your local machine:
+```bash
+git clone https://github.com/muhammadazmeerahmad/dolfer-keylogger
+```
 
-- **python -m pip install -r requirements.txt**
+### Step 2: Installing pyinstaller
+Windows
+```bash
+python -m pip install pyinstaller
+```
+Linux
+```bash
+python3 -m pip install pyinstaller
+```
+
+### Step 3: Edit:
+Edit the code in order to:
+*Add your own mail and app password
+*Timer settings 
+
+
+### Step 3: Converting to exe file
+```bash
+pyinstaller --onefile keylogger.py
+```
+### Got the .exe file ⚠🚀
+
+After writing and testing your Python keylogger script (keylogger.py), you’ll want to turn it into a standalone .exe file so it can run on any Windows system without needing Python installed.
+
+
+
 
