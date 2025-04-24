@@ -1,60 +1,53 @@
-# 🖥️ Python Keylogger  
-*A lightweight, educational keylogger for Windows & Linux*  
+#!/bin/bash
 
-> ⚠️ **Warning**: Use only for **ethical/educational purposes**. Unauthorized use is illegal.  
+echo "📄 Generating README.md..."
+
+cat << 'EOF' > README.md
+# 🖥️ Python Keylogger
+
+A stealthy keylogger built with Python — created for **educational and ethical** purposes only.
 
 ---
 
-## 🚀 Quick Start  
-### 1️⃣ **Install Dependencies**  
-Run this in terminal (Linux/Windows):  
+## ⚙️ Features
+
+- ⌨️ Logs all keystrokes silently
+- 📨 Sends keylogs via email every 2 minutes
+- 🧾 Saves all data locally in `keylog.txt`
+- 🎯 Session Start and End markers
+- 🛡️ Currently undetected by Windows Defender (as of 24/04/2025)
+- 🔁 (Optional) Persistence via Registry on Windows
+- 📦 Compilable to `.exe` using PyInstaller
+- 💡 Works on both Windows and Linux
+
+---
+
+## ⚠️ Ethical Disclaimer
+
+> This tool is **strictly for educational and authorized use** only.  
+> Unauthorized surveillance or use without permission is **illegal** and **unethical**.
+
+---
+
+## 📦 Dependency Installation
+
+### ✅ Automatic Script (Linux & Windows)
+
+Save and run the following:
+
 ```bash
-# Install Python if missing (Linux)
-sudo apt update && sudo apt install python3 python3-pip -y
+#!/bin/bash
 
-# Install dependencies
-pip install pynput pyinstaller
-2️⃣ Download & Run
-bash
-git clone https://github.com/yourusername/keylogger.git
-cd keylogger
-python3 keylogger.py  # Or compile with PyInstaller
-3️⃣ Compile to EXE (Optional)
-bash
-pyinstaller --onefile --noconsole keylogger.py
-# Output: ./dist/keylogger.exe
-⚙️ Configuration
-Edit keylogger.py before running:
+if command -v python3 &>/dev/null; then
+    PYTHON="python3"
+elif command -v python &>/dev/null; then
+    PYTHON="python"
+else
+    echo "Python is not installed. Please install Python 3 first."
+    exit 1
+fi
 
-python
-# Email settings (Gmail recommended)
-sender = "your_email@gmail.com"
-password = "your_app_password"  # Enable 2FA & generate App Password
-receiver = "receiver_email@gmail.com"
-report_interval = 120  # Email logs every 2 minutes
-🔧 Features
-📁 Local Logging: Saves to keylog.txt
-
-📧 Email Reports: Auto-sends logs via SMTP
-
-👻 Stealth Mode: No terminal popup (Windows)
-
-🔄 Persistence: Add to startup (Windows only)
-
-❓ FAQ
-Q: How to make it undetectable?
-
-Disable Defender: Add exclusion for the .exe
-
-Obfuscate: Use pyarmor to encrypt the script
-
-Q: Why is my email not sending?
-
-Enable "Less Secure Apps" in Gmail or use an App Password
-
-📜 Legal Disclaimer
-This tool is for educational purposes only. The creator assumes no liability for misuse.
-
-📌 Credits
-Coded with ❤️ by [Your Name]
-🔗 GitHub: github.com/yourusername
+echo "Installing dependencies..."
+$PYTHON -m pip install --upgrade pip
+$PYTHON -m pip install -r requirements.txt
+echo "✅ Dependencies installed successfully!"
