@@ -49,7 +49,7 @@ Edit the code in order to:
 
 ### Step 4: Building exe 🏗️
 ```bash
-pyinstaller --onefile keylogger.py
+pyinstaller --onefile --noconsole keylogger.py
 ```
 #Got the .exe file ⚠🚀
 
