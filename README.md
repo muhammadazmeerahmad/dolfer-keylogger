@@ -1,6 +1,6 @@
-# Keylogger Project
+# Keylogger Project ⌨💻
 
-## Overview
+## Overview 🚀
 
 This project is a **Python-based keylogger** designed for educational purposes. It records keystrokes, saves the data in a local file, and sends periodic keylog reports via email. THIS IS ALSO TOTALLY UNDETECTABLE AS OF 24/4/2025 UPDATE BY MICROSOFT DEFENDER
 
@@ -11,7 +11,7 @@ This project is a **Python-based keylogger** designed for educational purposes. 
 - **Background Operation**: Runs silently in the background after being compiled to `.exe`.
 - **Persistence**: Optionally configure auto-start on system boot via the registry (Windows).
 
-### Ethical Disclaimer:
+### Ethical Disclaimer:⚠
 This keylogger is **for educational purposes only**. Unauthorized use or deployment without consent is **illegal** and **unethical**. Always obtain explicit permission before using any keylogging software.
 
 ---
