@@ -29,5 +29,5 @@ To run this project, you'll need Python and the dependencies listed below.
 
 Clone or download the repository to your local machine:
 
-```bash
-git clone https://github.com/yourusername/keylogger-project.git
+- **python -m pip install -r requirements.txt**
+
