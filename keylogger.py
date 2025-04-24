@@ -32,9 +32,9 @@ def send_email(message):
     Sends an email with the provided message content.
     Uses Gmail's SMTP server and an app password.
     """
-    sender = "azmeerbaloch29@gmail.com"
-    password = "luon ilyi hiwz dxye"  # App password generated from Google
-    receiver = "azmeerbaloch29@gmail.com"
+    sender = "xyz"
+    password = "xyz"  # App password generated from Google
+    receiver = "xyz"
 
     # Create an email message object
     msg = MIMEText(message)
